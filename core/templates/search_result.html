@@ -1,0 +1,22 @@
+<form method="POST">
+    {% csrf_token %}
+
+    Buscar: <input type="text" name="search" value="{{ search }}" />
+</form>
+
+
+Lexemas:
+<ul>
+{% for lexema in lexemas %}
+    <li>{{ lexema }}</li>
+{% endfor %}
+</ul>
+Documentos ({{ docs | length }}):
+<ul>
+{% for doc in docs %}
+    <li>
+        <h1>{{ doc.id }} {{ doc.titulo }}</h1>
+        <p>{{ doc.noticia }}</p>
+    </li>
+{% endfor %}
+</ul>

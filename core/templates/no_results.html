@@ -1,0 +1,10 @@
+<form method="POST">
+    {% csrf_token %}
+
+    Buscar: <input type="text" name="search" value="{{ search }}" />
+</form>
+
+
+No se obtuvieron resultados para su busqueda: {{ search }}
+<br>
+{{ msg }}
