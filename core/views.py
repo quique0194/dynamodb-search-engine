@@ -26,7 +26,7 @@ def index(request):
         
         # Obtener lexemas del servidor nosql
         t0 = time.time()
-        lexemas = list(Lexema.batch_get(proc_text(search)))
+        lexemas = list(Lexema.batch_get(set(proc_text(search))))
         for lex in lexemas:
             if lex.lexema in search:
                 search_data['lexemas']['encontrados'].append(lex)
