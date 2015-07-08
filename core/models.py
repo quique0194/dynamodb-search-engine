@@ -10,7 +10,7 @@ class Lexema(Model):
         table_name = "Lexemas"
     lexema = UnicodeAttribute(hash_key=True)
     documentos = JSONAttribute(default='[]') # inverse index
-    idf = NumberAttribute(default=0)
+    tfidf = JSONAttribute(default='[]')
 
 
 class Documento(Model):
@@ -24,7 +24,6 @@ class Documento(Model):
     titulo = UnicodeAttribute(default='')
     noticia = UnicodeAttribute(default='')
     url = UnicodeAttribute(default='')
-    tf = JSONAttribute(default='{}')
 
 
 if __name__ == '__main__':

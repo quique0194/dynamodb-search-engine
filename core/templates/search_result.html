@@ -4,18 +4,12 @@
     Buscar: <input type="text" name="search" value="{{ search }}" />
 </form>
 
+Search Data: {{ search_data }}
 
-Lexemas:
-<ul>
-{% for lexema in lexemas %}
-    <li>{{ lexema }}</li>
-{% endfor %}
-</ul>
-Documentos ({{ docs | length }}):
 <ul>
 {% for doc in docs %}
     <li>
-        <h1>{{ doc.id }} {{ doc.titulo }}</h1>
+        <h4>{{ doc.id }} {{ doc.titulo }}</h4>
         <p>{{ doc.noticia }}</p>
     </li>
 {% endfor %}
