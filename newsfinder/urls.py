@@ -20,5 +20,6 @@ from core import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.index)
+    url(r'^$', views.index),
+    url(r'^(?P<page>[0-9]+)$', views.index)
 ]
