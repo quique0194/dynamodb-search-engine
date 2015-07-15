@@ -1,9 +1,13 @@
 <body>
 
 <form method="GET" id="searchForm">
-    <a href="/"><img src="http://vignette1.wikia.nocookie.net/gintama/images/0/00/Periodico.png/revision/latest?cb=20141113012107&path-prefix=es"/></a>
-    <input type="text" name="search" value="{{ search }}" />
-    <button>Buscar</button>
+    <div>
+        <img src="http://www.feriadelperro.es/images/news.png"/>
+    </div>
+    <div>
+        <input type="text" name="search" value="{{ search }}" />
+        <button>Buscar</button>
+    </div>
 </form>
 
 <div class="footer-filler"/>
@@ -20,24 +24,21 @@
 
 <style>
     #searchForm {
-        background: steelblue;
-        position: fixed;
         width: 100%;
         height: 70px;
+        margin-top: 100px;
         line-height: 70px;
         top: 0px;
         left: 0px;
     }
+    #searchForm > div {
+        text-align: center;
+    }
     #searchForm img {
-        position: absolute;
-        width: 80px;
+        width: 500px;
         top: 10px;
         left: 10px;
         cursor: pointer;
-    }
-    #searchForm label {
-        font-size: 15px;
-        margin: 0px 20px;
     }
     #searchForm input {
         width: 700px;
